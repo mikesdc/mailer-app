@@ -1,0 +1,97 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+@import "../../styles/partials/global";
+
+.input-page {
+  display: flex;
+  min-height: 100vh; /* Ensure the parent fills the viewport */
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-gray;
+  }
+
+  &__input-field {
+  }
+
+  &__form {
+    @include flex-center-center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  &__header {
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    color: $dark-indigo;
+    margin-bottom: 1rem;
+  }
+
+  &__input-field {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    border: 1px solid $cool-gray;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__button-container {
+    @include flex-center-center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__submit-button {
+    padding: 1rem 2rem;
+    margin: auto;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $white;
+    background-color: $dark-indigo;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $deep-purple-gray;
+    }
+
+    &:active {
+      background-color: $deep-teal;
+      transition: background-color 0s;
+    }
+  }
+  &__description {
+    &-container {
+      @include flex-center-center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    &-header {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      color: $dark-indigo;
+      margin-bottom: 1rem;
+    }
+    &-text {
+      font-size: 1.6rem;
+      text-align: center;
+      color: $dark-indigo;
+    }
+  }
+}
